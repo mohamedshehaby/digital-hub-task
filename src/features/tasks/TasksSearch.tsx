@@ -13,6 +13,7 @@ const TasksSearch = () => {
   const handleInputChange = (e: ChangeEvent<HTMLInputElement>) => {
     setInputValue(e.target.value);
     setSearchParams((searchParams) => {
+      searchParams.set("page", "1");
       searchParams.set("query", e.target.value);
       return searchParams;
     });
